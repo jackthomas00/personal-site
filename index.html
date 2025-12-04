@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jack Thomas - Software Engineer</title>
   <link rel="stylesheet" href="assets/styles.css">
 </head>
+
 <body>
   <div class="page">
     <header class="site-header">
@@ -27,17 +29,20 @@
       <section class="hero">
         <p class="eyebrow">Software Engineer · Full-Stack · AI</p>
         <h1>
-          I design and build end-to-end systems<br>
+          I build full-stack, production systems<br>
           with real users and real constraints.
         </h1>
         <p class="hero-subtitle">
-          I built <strong>TradeCRE</strong>, a secure full-stack platform for commercial real-estate collaboration - 
-          from Dockerized backend services and encryption flows to a modern React frontend.
+          I built <strong>TradeCRE</strong>, a secure platform for commercial real-estate collaboration —
+          owning everything from Dockerized backend services and encryption flows to a modern React frontend.
         </p>
         <div class="hero-links">
           <a class="btn primary" href="#contact">Get in touch</a>
-          <!-- Update these URLs -->
-          <a class="btn ghost" href="https://www.linkedin.com/in/jack-thomas-22a3a1117/" target="_blank" rel="noreferrer">
+          <a class="btn ghost" href="public/Jack-Thomas-Resume.pdf" target="_blank" rel="noreferrer">
+            Resume
+          </a>
+          <a class="btn ghost" href="https://www.linkedin.com/in/jack-thomas-22a3a1117/" target="_blank"
+            rel="noreferrer">
             LinkedIn
           </a>
           <a class="btn ghost" href="https://github.com/jackthomas00" target="_blank" rel="noreferrer">
@@ -46,25 +51,30 @@
         </div>
       </section>
 
+
       <!-- About -->
       <section id="about" class="section">
         <h2>About</h2>
         <div class="section-body">
           <p>
-            I'm a software engineer who likes building from first principles: understanding the problem,
-            choosing sane tradeoffs, and shipping systems that are simple to operate.
+            I'm a software engineer and CS student finishing my B.S. at CSUF. Most of my time goes into
+            building <strong>TradeCRE</strong> and experimenting with AI-driven systems for reasoning and
+            automation.
           </p>
           <p>
-            Recently, I've been focused on <strong>secure collaboration</strong>, <strong>applied AI</strong>, and 
-            <strong>infrastructure for reasoning systems</strong>—things like encrypted data models, document workflows,
-            and knowledge substrates for agents.
+            I like working from first principles: understand the problem, choose clear tradeoffs, and ship
+            systems that are simple to operate. That's led me to <strong>secure collaboration</strong>,
+            <strong>applied AI</strong>, and <strong>infrastructure for agents</strong> — encrypted data
+            models,
+            document workflows, and knowledge substrates.
           </p>
           <p>
-            I'm looking for teams where I can own meaningful pieces of the stack, learn from strong engineers,
-            and push real products forward.
+            I'm looking for backend, full-stack, or AI-adjacent roles where I can own meaningful pieces of
+            the product, learn from strong engineers, and push real systems into production.
           </p>
         </div>
       </section>
+
 
       <!-- Experience -->
       <section id="experience" class="section">
@@ -88,12 +98,13 @@
                 workflows for files, notes, tasks, and closing documents.
               </li>
               <li>
-                Implemented document workflows including closing checklists, PDF generation,
-                and an e-signature flow tailored to CRE transactions.
+                Implemented closing checklists, PDF-based closing statements, and an e-signature
+                flow tailored to how CRE transactions actually run in practice.
               </li>
             </ul>
             <p class="tech-line">
-              <span>Stack:</span> Python, Django/DRF, React, TypeScript, Postgres, Docker, Traefik, S3-compatible storage, cryptography
+              <span>Stack:</span> Python, Django/DRF, React, TypeScript, Postgres, Docker, Traefik,
+              S3-compatible storage, cryptography
             </p>
           </article>
         </div>
@@ -141,9 +152,9 @@
               <span class="pill pill-soft">NLP / Knowledge</span>
             </header>
             <p>
-              Prototype of a “knowledge substrate” that extracts entities, claims, and relations
-              from text and exposes them for retrieval and reasoning.
-            </p>
+              Prototype of a “knowledge substrate” that turns raw text into structured entities, claims,
+              and relations, so agents can retrieve and reason over explicit facts instead of just embeddings.
+            </p>            
             <ul class="card-list">
               <li>Pipeline for entity extraction, claim detection, and relation typing.</li>
               <li>Structured storage with pgvector for semantic search.</li>
@@ -159,14 +170,16 @@
         <div class="section-body">
           <p>
             I like to write up systems I build—both to clarify my own thinking and to make it easier
-            for others to reason about tradeoffs. A few examples I plan to publish:
+            for others to reason about tradeoffs. I'm currently drafting pieces on:
           </p>
           <ul class="bullet-list">
             <li>Designing encryption and key management for a collaborative web app</li>
             <li>What I learned building a traffic-light controller with multi-agent RL</li>
             <li>From raw text to structured knowledge: lessons from the OKC prototype</li>
           </ul>
-          <!-- Later, replace this list with actual links -->
+          <p>
+            If you'd like to read drafts or talk through any of these, feel free to reach out.
+          </p>          
         </div>
       </section>
 
@@ -175,8 +188,8 @@
         <h2>Contact</h2>
         <div class="section-body">
           <p>
-            The best way to reach me is by email. I'm open to roles in backend, full-stack, or
-            AI-adjacent engineering, especially on small teams shipping real products.
+            The best way to reach me is by email. I'm open to backend, full-stack, or AI-adjacent roles,
+            especially on small teams shipping real products and willing to let engineers own meaningful scope.
           </p>
           <div class="contact-grid">
             <div>
@@ -211,4 +224,5 @@
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
+
 </html>
