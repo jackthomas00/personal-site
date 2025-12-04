@@ -2,29 +2,213 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>Jack Thomas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jack Thomas - Software Engineer</title>
   <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
-  <header>
-    <h1>Jack Thomas</h1>
-    <p>Software engineer who built TradeCRE — secure full-stack CRE collaboration. Interested in AI systems, architecture, and applied ML.</p>
-  </header>
+  <div class="page">
+    <header class="site-header">
+      <div class="logo">
+        <span class="logo-mark"></span>
+        <span class="logo-text">Jack Thomas</span>
+      </div>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#writing">Writing</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
 
-  <section id="projects">
-    <h2>Selected Work</h2>
-    <ul>
-      <li><strong>TradeCRE</strong> — full-stack encrypted real estate collaboration platform.</li>
-      <li><strong>Multi-Agent RL Traffic Controller</strong> — custom reward shaping + dynamic β weighting.</li>
-      <li><strong>OKC Knowledge Substrate</strong> — claim extraction + structured reasoning engine.</li>
-    </ul>
-  </section>
+    <main>
+      <!-- Hero -->
+      <section class="hero">
+        <p class="eyebrow">Software Engineer · Full-Stack · AI</p>
+        <h1>
+          I design and build end-to-end systems<br>
+          with real users and real constraints.
+        </h1>
+        <p class="hero-subtitle">
+          I built <strong>TradeCRE</strong>, a secure full-stack platform for commercial real-estate collaboration - 
+          from Dockerized backend services and encryption flows to a modern React frontend.
+        </p>
+        <div class="hero-links">
+          <a class="btn primary" href="#contact">Get in touch</a>
+          <!-- Update these URLs -->
+          <a class="btn ghost" href="https://www.linkedin.com/in/jack-thomas-22a3a1117/" target="_blank" rel="noreferrer">
+            LinkedIn
+          </a>
+          <a class="btn ghost" href="https://github.com/jackthomas00" target="_blank" rel="noreferrer">
+            GitHub
+          </a>
+        </div>
+      </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:jack@example.com">jack@example.com</a></p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/...">Profile</a></p>
-  </section>
+      <!-- About -->
+      <section id="about" class="section">
+        <h2>About</h2>
+        <div class="section-body">
+          <p>
+            I'm a software engineer who likes building from first principles: understanding the problem,
+            choosing sane tradeoffs, and shipping systems that are simple to operate.
+          </p>
+          <p>
+            Recently, I've been focused on <strong>secure collaboration</strong>, <strong>applied AI</strong>, and 
+            <strong>infrastructure for reasoning systems</strong>—things like encrypted data models, document workflows,
+            and knowledge substrates for agents.
+          </p>
+          <p>
+            I'm looking for teams where I can own meaningful pieces of the stack, learn from strong engineers,
+            and push real products forward.
+          </p>
+        </div>
+      </section>
+
+      <!-- Experience -->
+      <section id="experience" class="section">
+        <h2>Experience</h2>
+        <div class="cards">
+          <article class="card">
+            <header class="card-header">
+              <div>
+                <h3>TradeCRE</h3>
+                <p class="card-subtitle">Founder / Full-Stack Engineer</p>
+              </div>
+              <span class="pill">2023 - Present</span>
+            </header>
+            <ul class="card-list">
+              <li>
+                Designed and implemented a full-stack platform for commercial real-estate deals:
+                Django/DRF backend, React frontend, Postgres, Docker, Traefik.
+              </li>
+              <li>
+                Built an encryption-aware data model with per-user keys, group sharing, and secure
+                workflows for files, notes, tasks, and closing documents.
+              </li>
+              <li>
+                Implemented document workflows including closing checklists, PDF generation,
+                and an e-signature flow tailored to CRE transactions.
+              </li>
+            </ul>
+            <p class="tech-line">
+              <span>Stack:</span> Python, Django/DRF, React, TypeScript, Postgres, Docker, Traefik, S3-compatible storage, cryptography
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section id="projects" class="section">
+        <h2>Selected Projects</h2>
+        <div class="cards">
+          <article class="card">
+            <header class="card-header">
+              <h3>TradeCRE Encryption & Permissions</h3>
+              <span class="pill pill-soft">Security / Systems</span>
+            </header>
+            <p>
+              End-to-end style encryption model for collaboration: per-user symmetric keys, encrypted
+              document keys, and role-based sharing with minimal trust in the server.
+            </p>
+            <ul class="card-list">
+              <li>Designed key hierarchy for users, groups, and documents.</li>
+              <li>Implemented client-side encryption flows integrated with API and database models.</li>
+              <li>Balanced security with usability for non-technical real-estate professionals.</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <header class="card-header">
+              <h3>Multi-Agent Traffic Light RL</h3>
+              <span class="pill pill-soft">RL / Simulation</span>
+            </header>
+            <p>
+              Multi-agent reinforcement learning controller for traffic lights using SUMO,
+              exploring coordination, reward shaping, and stability under real-world constraints.
+            </p>
+            <ul class="card-list">
+              <li>Built training loop with custom reward functions and dynamic weighting.</li>
+              <li>Used Ray Tune to search over hyperparameters and policies.</li>
+              <li>Evaluated agents on realistic traffic patterns and bottlenecks.</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <header class="card-header">
+              <h3>Open Knowledge Compiler (OKC)</h3>
+              <span class="pill pill-soft">NLP / Knowledge</span>
+            </header>
+            <p>
+              Prototype of a “knowledge substrate” that extracts entities, claims, and relations
+              from text and exposes them for retrieval and reasoning.
+            </p>
+            <ul class="card-list">
+              <li>Pipeline for entity extraction, claim detection, and relation typing.</li>
+              <li>Structured storage with pgvector for semantic search.</li>
+              <li>Focus on transparency and evidence-backed retrieval for agents.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- Writing / Deep dives -->
+      <section id="writing" class="section">
+        <h2>Writing & Deep Dives</h2>
+        <div class="section-body">
+          <p>
+            I like to write up systems I build—both to clarify my own thinking and to make it easier
+            for others to reason about tradeoffs. A few examples I plan to publish:
+          </p>
+          <ul class="bullet-list">
+            <li>Designing encryption and key management for a collaborative web app</li>
+            <li>What I learned building a traffic-light controller with multi-agent RL</li>
+            <li>From raw text to structured knowledge: lessons from the OKC prototype</li>
+          </ul>
+          <!-- Later, replace this list with actual links -->
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="section">
+        <h2>Contact</h2>
+        <div class="section-body">
+          <p>
+            The best way to reach me is by email. I'm open to roles in backend, full-stack, or
+            AI-adjacent engineering, especially on small teams shipping real products.
+          </p>
+          <div class="contact-grid">
+            <div>
+              <h3>Email</h3>
+              <!-- Update email -->
+              <a href="mailto:jack@jack-thomas.com">jack@jack-thomas.com</a>
+            </div>
+            <div>
+              <h3>LinkedIn</h3>
+              <a href="https://www.linkedin.com/in/jack-thomas-22a3a1117/" target="_blank" rel="noreferrer">
+                linkedin.com/in/jack-thomas-22a3a1117
+              </a>
+            </div>
+            <div>
+              <h3>GitHub</h3>
+              <a href="https://github.com/jackthomas00" target="_blank" rel="noreferrer">
+                github.com/jackthomas00
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span id="year"></span> Jack Thomas</p>
+    </footer>
+  </div>
+
+  <script>
+    // Small detail: keep footer year up to date
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
