@@ -8,6 +8,19 @@
   <link rel="stylesheet" href="assets/styles.css">
 </head>
 
+<script>
+  const p1 = "jac";
+  const p2 = "k@" 
+  const p3 = "jack-t";
+  const p4 = "homas.com";
+  const email = (p1 + p2 + p3 + p4).replace("k@", "k@"); // prevents simple concat detection
+  const el = document.getElementById("email-link");
+  el.href = "mailto:" + email;
+  el.textContent = email;
+</script>
+
+
+
 <body>
   <div class="page">
     <header class="site-header">
@@ -195,7 +208,7 @@
             <div>
               <h3>Email</h3>
               <!-- Update email -->
-              <a href="mailto:jack@jack-thomas.com">jack@jack-thomas.com</a>
+              <a id="email-link">Loading…</a>
             </div>
             <div>
               <h3>LinkedIn</h3>
