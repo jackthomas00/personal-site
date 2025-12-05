@@ -113,86 +113,11 @@
         </div>
       </section>
 
-      <!-- Projects -->
-      <section id="projects" class="section">
-        <h2>Selected Projects</h2>
-        <div class="cards">
-          <article class="card">
-            <header class="card-header">
-              <h3>TradeCRE Encryption & Permissions</h3>
-              <span class="pill pill-soft">Security / Systems</span>
-            </header>
-            <p>
-              End-to-end style encryption model for collaboration: per-user symmetric keys, encrypted
-              document keys, and role-based sharing with minimal trust in the server.
-            </p>
-            <ul class="card-list">
-              <li>Designed key hierarchy for users, groups, and documents.</li>
-              <li>Implemented client-side encryption flows integrated with API and database models.</li>
-              <li>Balanced security with usability for non-technical real-estate professionals.</li>
-            </ul>
-          </article>
+      <!-- Projects - loaded dynamically -->
+      <div id="projects-container"></div>
 
-          <article class="card">
-            <header class="card-header">
-              <h3>Multi-Agent Traffic Light RL</h3>
-              <span class="pill pill-soft">RL / Simulation</span>
-            </header>
-            <p>
-              Multi-agent reinforcement learning controller for traffic lights using SUMO,
-              aiming to reduce congestion and stabilize flows under realistic traffic patterns.
-            </p>
-            <ul class="card-list">
-              <li>Built training loop with custom reward functions and dynamic weighting.</li>
-              <li>Used Ray Tune to search over hyperparameters and policies.</li>
-              <li>Evaluated agents on realistic traffic patterns and bottlenecks.</li>
-            </ul>            
-          </article>
-
-          <article class="card">
-            <header class="card-header">
-              <h3>Open Knowledge Compiler (OKC)</h3>
-              <span class="pill pill-soft">NLP / Knowledge</span>
-            </header>
-            <p>
-              Prototype of a “knowledge substrate” that turns raw text into structured entities, claims,
-              and relations, so agents can retrieve and reason over explicit facts instead of just embeddings.
-            </p>            
-            <ul class="card-list">
-              <li>Pipeline for entity extraction, claim detection, and relation typing.</li>
-              <li>Structured storage with pgvector for semantic search.</li>
-              <li>Focus on transparency and evidence-backed retrieval for agents.</li>
-            </ul>
-          </article>
-        </div>
-      </section>
-
-      <!-- Writing / Deep dives -->
-      <section id="writing" class="section">
-        <h2>Writing & Deep Dives</h2>
-        <div class="section-body">
-          <p>
-            I like to write up systems I build—both to clarify my own thinking and to make it easier
-            for others to reason about tradeoffs. I'm currently drafting pieces on:
-          </p>
-          <p>
-            Here's a deep-dive on the architecture behind <strong>TradeCRE</strong>:
-          </p>
-          <ul class="bullet-list">
-            <li>
-              <a href="https://tradecre.com/inside-9fd37a2b1c/" target="_blank">
-                Inside TradeCRE: Designing a Secure Real-Estate Collaboration Platform
-              </a>
-            </li>
-            <li>Designing encryption and key management for a collaborative web app</li>
-            <li>What I learned building a traffic-light controller with multi-agent RL</li>
-            <li>From raw text to structured knowledge: lessons from the OKC prototype</li>
-          </ul>
-          <p>
-            If you'd like to read drafts or talk through any of these, feel free to reach out.
-          </p>          
-        </div>
-      </section>
+      <!-- Writing / Deep dives - loaded dynamically -->
+      <div id="writing-container"></div>
 
       <!-- Contact -->
       <section id="contact" class="section">
@@ -243,6 +168,32 @@
         el.textContent = email;
       }
     })();
+
+    // Load components dynamically
+    async function loadComponent(containerId, componentPath) {
+      try {
+        const response = await fetch(componentPath);
+        if (!response.ok) {
+          throw new Error(`Failed to load ${componentPath}: ${response.statusText}`);
+        }
+        const html = await response.text();
+        const container = document.getElementById(containerId);
+        if (container) {
+          container.innerHTML = html;
+        }
+      } catch (error) {
+        console.error(`Error loading component ${componentPath}:`, error);
+        const container = document.getElementById(containerId);
+        if (container) {
+          container.innerHTML = `<p style="color: var(--text-muted);">Error loading content. Please refresh the page.</p>`;
+        }
+      }
+    }
+
+    // Load all components
+    // Script is at end of body, so DOM is already loaded - call directly
+    loadComponent('projects-container', 'projects/projects.html');
+    loadComponent('writing-container', 'deep-dives/writing.html');
   </script>
 </body>
 
