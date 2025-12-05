@@ -192,11 +192,10 @@
       }
     }
 
-    // Load all components when DOM is ready
-    document.addEventListener('DOMContentLoaded', () => {
-      loadComponent('projects-container', 'projects/projects.html');
-      loadComponent('writing-container', 'deep-dives/writing.html');
-    });
+    // Load all components
+    // Script is at end of body, so DOM is already loaded - call directly
+    loadComponent('projects-container', 'projects/projects.html');
+    loadComponent('writing-container', 'deep-dives/writing.html');
   </script>
 </body>
 
